@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Espace Client</title>
+</head>
+<body>
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
+
+<header>
+    <img src="assets/image/image.png" class="logo" height="80" width="80" alt="">
+    Espace Client - Depot NKELS
+</header>
+
+<div class="container">
+    <nav>
+        <ul>
+            <a href="index.html"><li><img src="assets/image/account_circle_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" height="30" width="30"> Profil</li></a>
+
+            <a href=""><li><img src="assets/image/shopping_bag_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" height="30" width="30"> Commandes</li></a>
+
+           <a href=""><li><img src="assets/image/credit_card_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" height="30" width="30"> Paiements</li></a>
+
+            <a href=""><li><img src="assets/image/liquor_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" height="30" width="30">Boissons</li></a>
+
+            <a href=""><li class="deconnexion"><img src="assets/image/logout_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" height="30" width="30"> Déconnexion</li></a>
+        </ul>
+          
+    </nav>
+
+    <main>
+        <div class="card">
+            <h2>Bienvenue, Jean Dupont</h2>
+            <p>Passez vos commandes en toute securite</p>
+        </div>
+
+        <div class="card">
+            <h2>Dernieres Commandes</h2>
+            <ul>
+                <li>Commande #1023 - En cours de livraison</li>
+                <li>Commande #1022 - Livrée</li>
+                <li>Commande #1021 - Annulée</li>
+            </ul>
+        </div>
+    </main>
+</div>
+    <footer>
+    &copy; 2025 Depot NKELS. Tous droits réservés.
+    </footer>
+</body>
+    <script>
+        const loader = document.querySelector('.loader');
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+        loader.style.display = 'flex';
+    </script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="contener">
+            <aside>
+                <div style="text-align: center; ">
+                    <i class="fas fa-glass-whiskey" style=" color: #2563eb;font-size: 100px;"></i> <br>
+                    <h1>Bois<span style=" color: #2563eb;">Dash</span></h1>
+                </div> <br>
+                <hr>
+                <nav>
+                    <a href="" class="active"><i class="fas fa-home i"></i> Dashboard</a>
+                    <a href=""><i class="fas fa-shopping-cart i"></i> Commandes</a>
+                    <a href=""><i class="fas fa-users i"></i> Clients</a>
+                    <a href=""><i class="fas fa-wine-bottle i"></i>Boissons</a>
+                    <a href="">Dashboard</a>
+                    <a href=""><i class="fas fa-cog i"></i>PArametres</a>
+                </nav>
+            </aside>
+
+            <main>
+                <header>
+                    <div>
+                        <i class="fa-solid fa-bars-staggered"></i> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <i class="fa-brands fa-searchengin"></i>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-bell"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <i class="fa-solid fa-message"></i> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                        <i class="fa-solid fa-user" style="color: gray; font-size: 50px;"></i> 
+                        <strong ><span >Admin</span></strong>
+                    </div>
+                </header>
+                <hr>
+                <section>
+                    <div id="clients" class="section-container">
+                        <div class="section-header">
+                            <div class="section-title">Liste des commandes</div>
+                            <div><button style="height: 50px; width: 150px;background-color: blue;border-radius: 10px;cursor: pointer;color: white;border: none;">
+                                Ajouter une commande
+                            </button></div>
+                        </div>
+                        
+                        <table cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>ID Client</th>
+                                    <th>ID Vente</th>
+                                    <th>Nom</th>
+                                    <th>Prénom</th>
+                                    <th>Téléphone</th>
+                                    <th>Adresse</th>
+                                    <th>Quantité</th>
+                                    <th>Montant</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Les données seront insérées dynamiquement par PHP -->
+                                <tr>
+                                    <td colspan="9" style="text-align: center; padding: 40px; color: gray;">
+                                        <i class="fas fa-shopping-cart" style="font-size: 48px; margin-bottom: 15px; display: block;"></i>
+                                        Aucune vente enregistrée
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

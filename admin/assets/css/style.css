@@ -7,3 +7,167 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.contener {
+    display: flex;
+}
+
+.contener aside {
+   
+    width: 350px;
+    min-height: 100vh;
+}
+
+.contener aside nav {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 40px;
+}
+
+.contener aside nav a {
+    text-decoration-line: none;
+    font-size: 18px;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.contener aside nav a:hover {
+    padding-left: 10px;
+    transition: 0.3s;
+    background-color: rgba(0, 0, 255, 0.2);
+}
+
+.active {
+    padding-top: 10px;
+    background-color: blue;
+    color: white;
+}
+a {
+    color: black;
+}
+
+hr {
+    font-size: 15px;
+}
+
+.contener main {
+    flex: 1;
+    background-color: #F3F4F6;
+}
+
+.contener main header {
+    height: 10%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+i {
+    font-size: 35px;
+    cursor: pointer;
+}
+.i {
+    font-size: 18px
+}
+
+main section {
+    margin: 50px;
+    box-shadow: 0px 0px 10px black;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+main section .color {
+   display: flex;
+   justify-content: space-around;
+    gap: 20px;
+    color: white;
+}
+
+main section .color div {
+    height: 120px;
+    width: 100%;
+    padding: 20px;
+   text-align: center;
+   margin-top: 20px;
+   transition: 1s;
+}
+
+main section .color div:hover {
+    transform: scale(1.15);
+}
+
+main section .color div i {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+main section .color .blue {
+    background-color: blue;
+}
+
+main section .color .green {
+    background-color: green;
+}
+
+main section .color .yellow {
+    background-color: orange;
+}
+
+main section .color .red {
+    background-color: red;
+}
+ 
+table {
+    width: 100%;
+    background-color: #F9FAFB;
+}
+
+tr,th,table {
+    border: 1px solid rgb(197, 190, 190);
+}
+
+th {
+    background-color: #F9FAFB;
+    height: 50px;
+}
+
+.section-title {
+    font-size: 33px;
+    font-weight: 600;
+    color: blue;
+}
+.section-container {
+    padding: 25px;
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+#sect {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.sect {
+    height: 200px;
+    padding: 20px;
+    border-left: 5px solid blue;
+    border-radius: 10px;
+    background-color: #F9FAFB;
+}
+
+.sect strong {
+    font-size: 25px;
+}
+
+
+        

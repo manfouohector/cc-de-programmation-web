@@ -1,0 +1,238 @@
+/* ================== RESET ET STYLES GÉNÉRAUX ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ================== CONTENEUR PRINCIPAL ================== */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ================== SECTION ILLUSTRATION ================== */
+.illustration {
+    flex: 1;
+    background: linear-gradient(to bottom right, #6e8efb, #a777e3);
+    color: white;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.illustration h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.illustration p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.features {
+    list-style-type: none;
+}
+
+.features li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.features i {
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================== SECTION FORMULAIRES ================== */
+.form-container {
+    flex: 1;
+    padding: 50px 40px;
+}
+
+/* ================== NAVIGATION PAR ONGLETS ================== */
+.tabs {
+    display: flex;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.tab {
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #777;
+    transition: all 0.3s ease;
+}
+
+.tab.active {
+    color: #6e8efb;
+    border-bottom: 3px solid #6e8efb;
+}
+
+/* ================== STYLES DES FORMULAIRES ================== */
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* ================== GROUPES DE CHAMPS ================== */
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #6e8efb;
+    outline: none;
+}
+
+.input-group i {
+    position: absolute;
+    right: 15px;
+    top: 42px;
+    color: #888;
+}
+
+.password-toggle {
+    cursor: pointer;
+}
+
+/* ================== BOUTONS ================== */
+.btn {
+    background: linear-gradient(to right, #6e8efb, #a777e3);
+    color: white;
+    border: none;
+    padding: 16px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #5d7dfa, #9666e0);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(106, 142, 251, 0.4);
+}
+
+/* ================== PIED DE FORMULAIRE ================== */
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.form-footer a {
+    color: #6e8efb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ================== MESSAGES D'ALERTE ================== */
+.message {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: none;
+}
+
+.success {
+    background-color: #e7f7ef;
+    color: #2ecc71;
+    border: 1px solid #2ecc71;
+}
+
+.error {
+    background-color: #fdeaea;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+/* ================== RESPONSIVE DESIGN ================== */
+@media (max-width: 850px) {
+    .container {
+        flex-direction: column;
+        max-width: 500px;
+    }
+    
+    .illustration {
+        padding: 30px;
+    }
+    
+    .form-container {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tabs {
+        justify-content: center;
+    }
+    
+    .tab {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}

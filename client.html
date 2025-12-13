@@ -4,39 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Espace Client</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Accuiel</title>
 </head>
-<body>
+<body id="client">
     <div class="loader">
         <div class="spinner"></div>
     </div>
-
-<header>
-    <img src="assets/image/image.png" class="logo" height="80" width="80" alt="">
-    Espace Client - Depot NKELS
-</header>
-
-<div class="container">
-    <nav>
-        <ul>
-            <a href="index.html"><li><img src="assets/image/account_circle_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" height="30" width="30"> Profil</li></a>
-
-            <a href=""><li><img src="assets/image/shopping_bag_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" height="30" width="30"> Commandes</li></a>
-
-           <a href=""><li><img src="assets/image/credit_card_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" height="30" width="30"> Paiements</li></a>
-
-            <a href=""><li><img src="assets/image/liquor_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" height="30" width="30">Boissons</li></a>
-
-            <a href=""><li class="deconnexion"><img src="assets/image/logout_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" height="30" width="30"> Déconnexion</li></a>
-        </ul>
-          
-    </nav>
-
+   <header>
+        <div class="depot">
+            <img src="assets/image/image.png" class="logo" alt=""> 
+            <div class="Nkels">
+                <p>Depot <br> NKELS</p>
+            </div>
+            <div class="container">
+                <nav>
+                    <a href="client.html"><img src="assets/image/home_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="">Accuiel</a>
+                    <a href="commandes.html"><img src="assets/image/shopping_bag_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""> Commandes</a>
+                    <a href="boissons.html"><img src="assets/image/liquor_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""> Boissons</a> 
+                    <button id="panier-icon" class="panier" type="submit"><img src="./assets/image/shopping_cart_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""></button>
+                    <a href=""><img src="assets/image/account_circle_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""> </a>  
+                </nav>
+            </div>
+        </div>
+    </header>
     <main>
         <div class="card">
-            <h2>Bienvenue, Jean Dupont</h2>
-            <p>Passez vos commandes en toute securite</p>
+            <h2>🎉 Bienvenue chez Depot NKELS</h2>
+            <p>
+
+Nous sommes ravis de vous accueillir sur Depot NKELS.
+Découvrez notre sélection de boissons, passez vos commandes en toute simplicité et suivez l’historique de vos achats en toute sécurité.
+
+Merci de nous faire confiance.
+Bonne visite et excellente expérience avec NKELS ! 🍹🥂</p>
         </div>
 
         <div class="card">
@@ -49,15 +50,20 @@
         </div>
     </main>
 </div>
+      <form action="">
+        <div class="panier-overlay">
+        <div class="panier-modal">
+            <h2>Panier</h2>
+            <ul id="panier-items">
+            </ul>
+            <button id="close-btn">Fermer</button>
+        </div>
+        </div>
+    </form>
     <footer>
     &copy; 2025 Depot NKELS. Tous droits réservés.
     </footer>
 </body>
-    <script>
-        const loader = document.querySelector('.loader');
-        setTimeout(() => {
-            loader.style.display = 'none';
-        }, 500);
-        loader.style.display = 'flex';
+    <script src="./assets/javascript/panier.js">
     </script>
 </html>

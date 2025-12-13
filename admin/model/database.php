@@ -14,7 +14,7 @@
 
         public function connectTODb() {
             try {
-                $pdo = new PDO($dsn,$userName,$password);
+                $pdo = new PDO($this->dsn,$this->userName,$this->password);
                 $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
                 echo "connexon reusiir";

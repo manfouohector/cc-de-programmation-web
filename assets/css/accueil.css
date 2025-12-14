@@ -47,6 +47,11 @@ body::before {
     padding: 15px;
     margin-bottom: 30px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    animation: move-icon infinite ;
+}
+@keyframes move-icon {
+    from{margin-bottom: 0px;}
+    to{margin-bottom: 10px;}
 }
 
 h1 {

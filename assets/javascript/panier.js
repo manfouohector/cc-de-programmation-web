@@ -1,5 +1,5 @@
 const loader = document.querySelector('.loader');
-setTimeout(() => loader.style.display = 'none', 500);
+setTimeout(() => loader.style.display = 'none', 100);
 loader.style.display = 'flex';
 
 // ---- PANIER ----
@@ -66,14 +66,16 @@ function afficherPanier() {
                        max="99"
                        onchange="changerQuantiteInput(${index}, this.value)"
                        onclick="this.select()">
-                <button class="delete-btn" onclick="supprimer(${index})">🗑️ Supprimer</button>
+                <button class="delete-btn" onclick="supprimer(${index})"> Supprimer</button>
             </div>
             
             <span class="item-total">Total: ${(item.prix * item.quantite).toLocaleString()} FCFA</span>
             <hr>
         `;
+
         panierItems.appendChild(li);
     });
+   
     calculerTotal();
 }
 // Changer quantité via input
@@ -93,6 +95,7 @@ function changerQuantiteInput(index, nouvelleQuantite) {
     sauvegarder();
     afficherPanier();
 }
+
 // Supprimer un article
 function supprimer(index) {
     if (confirm('Voulez-vous vraiment supprimer cet article ?')) {
@@ -161,6 +164,22 @@ if (closeBtn) {
         e.preventDefault();
         fermerPanier();
     });
+}
+function valide(){
+    if (panier.length>0) {
+         alert("Commande confirmée ! Merci pour votre achat.");
+        panier=[];
+        fermerPanier();
+    } else {
+        alert("pas de produit")
+    }
+}
+const valider=document.getElementById('comfirm-btn')
+if (valider) {
+    valider.addEventListener('click',(e)=>{
+        e.preventDefault();
+        valide();
+    })
 }
 const panierIconBtn = document.getElementById('panier-icon');
 if (panierIconBtn) {

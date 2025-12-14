@@ -435,7 +435,23 @@ h2 {
     font-size: 16px;
     transition: all 0.3s ease;
 }
-
+#comfirm-btn{
+    width: 100%;
+    padding: 15px;
+    background: #359e0c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+#comfirm-btn:hover{
+    background: #94d41c;
+    transform: scale(1.02);
+}
 #close-btn:hover {
     background: #1a252f;
     transform: scale(1.02);

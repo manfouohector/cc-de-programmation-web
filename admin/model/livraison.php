@@ -8,9 +8,9 @@
             $this->db = new Database();
         }
 
-        public function  create($nom ,$prenom,$sexe,$adresse,$tel) {
-            $sql = "insert into livraison set nom=?,adresselivraison=?,Tel=?,PrenomClt=?,sexe=?";
-            $params = array($nom,$adresse,$tel,$prenom,$sexe);
+        public function  create($status,$fraisLivraison,$dateLivraison) {
+            $sql = "insert into livraison set status=?,fraisLivraison=?,dateLivraison=?";
+            $params = array($status,$fraisLivraison,$dateLivraison);
             $this->db->prepareSQL($sql,$params);
         }
 
@@ -38,12 +38,12 @@
             $this->db->prepareSQL($sql,$params);
         }
 
-        public function update($id,$nom ,$prenom,$sexe,$adresse,$tel) {
+        public function update($status,$fraisLivraison,$dateLivraison) {
             $sql = "delete 
                     from livraison
-                    set nom=?,prenom=?,sex=?,adresse=?,tel=?
+                    set status=?,fraisLivraison=?,dateLivraison=?
                     where id=?";
-            $params = array($id,$nom ,$prenom,$sexe,$adresse,$tel);
+            $params = array($status,$fraisLivraison,$dateLivraison);
             $this->db->prepareSQL($sql,$params);
         }
 
